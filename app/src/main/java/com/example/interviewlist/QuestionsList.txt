@@ -1,0 +1,597 @@
+
+Kotlin Interviews question
+
+1. Functional interface in kotlin
+2. Find duplicate char in String = “furniture”
+3. Write latent and lazy
+4. Facade pattern
+5. What design patterns you have implemented in android
+6. Show the code and tell the code flow
+but tell me when we use viewmodel in android with jetpack compose we use state flow or live data ...are not they hot flow ? but u said above for api calls we should use cold flow
+1. How to write Glide library - how it optimise images.. suppose we are directly adding the images to recyleview and loading tons of data.. of if we are using glide how it is optimising the images
+2. Write a mock api . We are pulling the api till it is returning true and we are exiting the loop when it is returning false (you can take a math.random fun to make to return true or false)
+3. Hold vs cold flow
+4. How we handle exception in coroutine
+5. Convert a launch coroutines to async
+6. ,,where should I store api keys in android
+7. Use of multi dex
+8. Can a apply scope fun return a different object ex. Apply
+9. PIP mode
+10. Can scope fun returns different result than what they actually does now
+11. What are the challenges you have faced so far in your android development career
+
+How to change the state of array
+Input Array[10, 20, 30, 40, 50, 60, 70, 75],
+K=2 -> [70, 75, 10, 20, 30, 40, 50, 60]
+K=3 -> [60, 70, 75, 10, 20, 30, 40, 50]
+
+//============
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+Example 1:
+Input: s = "()"
+Output: true
+
+Example 2:
+Input: s = "()[]{}"
+Output: true
+
+Example 3:
+Input: s = "(]"
+Output: false
+
+
+//======================= AF and HMI
+Concusion - lean designing everything like Bitmovin player
+
+How you architect the STC application ..How it flows…define it for car
+Bitmovin is extrenal app for streaming we need to design one for app
+How to show content on multi screen.. multi screen architecture in android  - foldable devices or mutilple devices in car
+Why work in multiple companies it takes 2 years to understand 1 project and then get deep into it
+What is your next step ? U have worked on many domain ..what would be the next domain u want your expertise in..
+
+// Jar
+What do you think about our startup ?
+Supervisor job
+State flow and shared flow
+flowOn
+Latent and lazy .. can we initialise lazy as nullable … or lateinit as nullable
+What is open keyword in Kotlin
+Second largest array
+Replay in flow
+Sharedflow and state flow both are hot flows or cold ?
+What launch return and what we can do with it
+High order functions
+Hilt questions answers
+
+main() {
+
+Var a =1
+Var b = 2
+a = b.also{ b = a} . Apply { b* = 2 }
+
+}
+
+Difference between Dispatchers Default and Dispacter IO
+IO dispatcher is optimized for I/O-bound operations such as network requests, file operations, and database interactions.
+he Default dispatcher is ideal for CPU-bound tasks and computationally intensive operations
+
+Object vs companion object
+￼
+You
+can we create  a activity without UI in android ?
+9 pach images …
+
+Difference Kotlin and other android development technoligies
+Android 14 and previous versions
+Var or val
+Val and const - Done
+difference between Mockito or MockK - Done
+
+Crossline
+Infix
+Create ur own logic to save 100 values
+Print 1-100 unique number using random function
+ fun getRandomInt(): Int {
+  return (1 + Random.nextInt(0, 100))
+}
+
+Git - when you use force update, merge, rebase
+
+Single Instance Single top
+How to call a fun in io from repoImpl and get result on main thread
+Custom scope for compose not singleton or activiy
+How to call a fun
+
+A B C D
+B - Single Top
+ A B C D -> B
+B
+A B C D | B
+
+API1 API2 API3
+
+result 4 =. result1, result2
+
+
+using flow
+
+operator
+
+flow.combine { re
+}.collect {
+}
+
+
+GraphQL ->
+
+Higher order fun real use case
+
+
+Clean Code
+
+presentation ->
+Activity (Compose Screens -> funs Navigation & ViewModel
+domain ->
+Repository (interface - usescases)
+data ->
+Concrete Repo -> Apis or Storage
+
+
+Install in scope for Compose file  not activity for Login ..you do need in the complete project
+How to navigate in compose
+Remember and rememberSaveable
+Filter in flow
+Memory profiler tool to check memory issue and fix result
+Analytics tool ..how to use it to solve customer problem if he stuck on a page
+How to combine 4 results of api in flow —
+http or graphql -> how to send authorisation in all apis  from a single source
+Internal modifier
+Provide and bind difference
+how we cehck api failing in adroid by analytic tool. explain in two lines
+Constraint layout — how to define 4 textview adjacent and below and how to define constraint for them
+
+Is putting key at grade.app is secure ?
+How to pass arguments in jetpack compose
+
+// you have s = Ajay
+// how many A are coming , J
+// A- 2
+// J -1
+// Y -1
+//find the occurance of each char
+// animation in jetpack compose
+Real world example of infix
+Work manager ..for what type of task we use it . Which method
+How to update UI from the services
+Types of services
+What is looper ?
+What is MVP and how it is different from MVVM ?
+Diff between lifecycle scope vs ViewModel scope
+All the threads in coroutines
+Real life example of inline fun …why we use it
+
+//—————————— MVVM interview
+// How we cache image data in app
+// how we cache image data in jetpackcompse
+// to cache images do we save urls
+// how AsycImage fun will cache the image..how glide will
+
+Why we sharing data to UI using stateFlow, why not using LiveData or Sharedflow or flow
+
+So you created EventBus ..so if u have two actives sharing the event bus. Both will receive the events.. but I require only in 1 activity
+
+You wrote the viewModel object in GallerySceen but what if I have to share the ViewModel object muliple composable screens and also require in main activity to do some work ..where would you define the viewModel object
+
+Corouties .. why u use viewModelScope … why not other way .. write coroutine without viewModelScope in  ViewMOdel..not global Scope ,
+Difference between viewModelScope, lifecycleScop and other scope
+
+// ways to send authorisation token in retrofit interface
+// write two composable function for different screen and to navigate between each other and also write them like they are testable
+
+
+Mvvm logic ..scenario login screen UI ..classes
+Clean
+Sealed calles, interface
+Coroutines
+Inline , infix croosline , Kotlin smoe other fun …
+Handling Coro exception ..advanhe
+Kotlin ..
+Carotene launch   4 5 luck …print thread name  io, main , confined …. runblocking  (write)
+Don’t interrupt other children coroutine
+
+Why use update in ViewModel other way to do this
+Advanced Android
+Security
+Design Pattern
+Clean Architecture
+
+Create testable compose functions
+
+
+
+//
+
+Scenario Based .. PS
+Practical -
+
+Practice access. Modifiers in Kotlin with code examples class A {
+    fun callMethods() {
+        internalMethod()
+    }
+
+    internal fun internalMethod() {
+        println("Internal Method Called")
+        privateMethod()
+    }
+
+    private fun privateMethod() {
+        println("Private Method Called")
+        protectedMethod()
+    }
+
+    protected fun protectedMethod() {
+        println("Protected Method Called")
+    }
+}
+fun main() {
+    val a = A()
+    a. internalMethod()
+ a. privateMethod()
+a. protectedMethod()
+} now tell me the output  when you implemented all the security measure like ssl pinning encryption dec.. in details you have to tell at low level
+Solid principles
+How many ways you can use to do async operation in android
+Work manager ..how it is different from services or is intent service and work manager are same
+Write a jetpack compose code .. 3 buttons should be in a row with same space… and also instead of creating 3 buttons ..can you write a code that create 3 buttons without duplicatig
+If you have same kind of button..what u gonna do to implement in the project
+
+
+
+How to create 3 buttons in compose without writing duplicate code much
+
+Implement a function to check if a given string is a palindrome in Kotlin? “Mirror”, radar
+
+
+Implement a function to reverse an array of integers in-place using Kotlin?
+
+Add why to every world like ViewModelScrope.launch -> why we used viewModelscope
+Why we used .launch
+
+
+Why did not you use dispatcher.io in ViewModel
+
+viewModelScope.launch {
+    _state.update { currentState ->
+        currentState.copy(isLoading = true) }
+    _state.value.copy(isLoading = true)
+    repository.searchGallery(query).onLeft { error ->
+        val errorMessage = error.statusCode?.takeIf { it != 0 }
+            ?.let { "${error.error.message} Code: $it" } ?: error.error.message
+
+        _state.update { it.copy(error = errorMessage) }
+
+        sendEvent(Event.Toast(errorMessage))
+
+    }.onRight { galleryItems ->
+        _state.update { it.copy(galleryItemList = galleryItems) }
+    }
+
+    _state.update { it.copy(isLoading = false) }
+}
+
+
+Can we use viewModelScope.async .. how will it effect the code
+
+Is viewModel is a supervisor job ?
+
+Why we need cold flow in android
+We got data in activity then we go back and come again… we want to changed data..in this situation do we need cold flow or hot flow ?
+
+Will it print  fun main() {
+
+    GlobalScope.async {
+
+        println("If i print something here")
+
+
+    }
+
+
+}
+
+
+From the interview I got 2 serious things —>
+
+See code in single page and from the angle of thread is it main thread of background thread
+Like I could not able to differentiate if my api is getting called on main thread or background thread
+
+2 . viewModelScope.launch  is a supervisor job or not… there could be line 5 uses cases for hitting an api why don’t I know the use of supervisor code in use of hitting the api or for async task.. I need to create use cases for asynchronous tasks and match all the coroutine scope with it
+
+http://localhost:3000/
+
+
+Reverse a string without reversed function
+You know scope function .. use apply and update name .. create a person data class
+Activity mode single top , single task , single instance
+Swap two numbers using the mutable list  using the extension function
+
+
+//fun main() {
+//
+//
+//    val numbers  = listOf(1,2,3)
+//
+//    numbers.swap(0, 2)
+
+//}
+
+//fun MutableList<T>.swap(indexA: Int, indexB: Int) {
+//
+//    var temp = this[indexA]
+//    this.[indexA = indexB
+//    indexB = indexA
+//
+//}
+
+Clean architrecture how it works
+
+viewModelScope.launch —> how it will handle exception  If one coroutine fails
+Does another child will also fail
+HashMapViewModel
+How viewModel survive configuration change … view model also has object that does not survive ViewModel changes
+
+
+
+Why classes are Kotlin final ..why you can not extend it
+
+
+
+View model new concept of on Destory on final something
+How to start Intent service  difference between thread and intent service  Content Providers VS AIDL
+How to design app for different screen types like mobile, Tab and TV in one application live Data post and set
+Mutable live data and live data
+Delegation in Kotlin
+Room database
+Update DB in android
+Steps for the migration and reauied classes
+Work of work manager
+Constraint Layout vs Cordinator Layout
+
+How database migration works
+If ur app is version 7 and the customer is using version3 -> u create tables in version 4 then 5 then 6 then 7
+
+When u code u check if for a customer using version 3 do not have tables for version 5 ,4 if they are null you create them fro them
+And also make them force update to latest version
+
+find the longest substring in the string abcabcbb
+
+
+
+
+//===========
+NDK Android
+
+// CI/ CD
+
+How coroutines works internally ?
+Activity launch mode
+
+A B C D then I launch B in launch mode ?
+ Difference between serialize and personalise  Java abstraction
+
+How coroutines handle multiple courtiers ? Can they all work on the same thread ?
+
+Whitelisting and blacklisting of url in android app react and native
+
+Difference between .equals and == in java
+
+How to achieve abstraction in java
+
+How coroutines internally work 
+Stl
+
+Basic components in Android
+Types of broadcast receivers
+How to awake a sleeping device from service
+What is Channing.. 4 apis or services you can hit in work manager and get result how ?
+How to run two retrofit urls in a project . .. how factory method can help?
+What is factory method
+Advantages of Kotlin
+Count characters in paragraph
+Facede pattern
+Top level functions
+What are concrete classes
+High order function
+Oops interface
+3 basis and more used design patterns in android
+What is global scope in coroutine and what are other scopes
+Advantages of using Kotlin over java
+Why we use room database over sqlite
+How migration works if we have 4 databases or versions updating each in jan , feb, march
+What is content resolved and content provider.it is used in single application or multiple applications
+Why we use fragments .. why can not we use activities’
+What is syncronization
+Sting is mutable or immutable
+Difference between string buffer and string builder
+Reasons of using an interfaces
+Difference between overriding and overloading   Kotlin Interview questions 2 ======= Infosys
+
+Difference between bind and provide
+How we write coroutines in view mode -> write
+High order function -> write
+Filter the starting list with “Ajay Mehta” ..find the names with sh at the ending code
+Using MVVM over clean architecture
+Side effects of Jetpack compose
+Certificate pinning - implantation as well
+Real world example where we use DIspatachers.Deafault
+Names of Design Patters and its uses
+How to test Coroutines
+What we call coroutines if they are not thread
+Benefits of using coroutines
+Use of noinline over inline
+
+Must know about the concepts of OTT
+How we make streaming based on network speed..if connect is show..it streaming coverts to lower quality
+How to save OTT URL for later use ..in an encrypted manner in code..
+More concepts about OTT
+
+
+// 1 - list of strings
+// contain users Ajay Mehta
+// string - sh another variable
+// find  .. users start with last name as sh .. lower case
+
+
+fun main() {
+    val names = listOf<String>("Ajay Mehta", "Vekant Shirish")
+
+    val filteredNames = names.filter { name -> name.split(" ").last().lowercase().endsWith("sh") }
+    println(filteredNames)
+}
+
+
+Real example of using launch(Dispatcher.Default) where we really use it
+Difference between live data and mutable live data
+MQTT protocol 
+//========= DMI
+
+Create a simple mvvm application using counter
+BLE ? How much data BLE can send ? Can it send 1 GB data
+What is MTU ?
+Can we take user location every minute in Android ? What is the mechanism to do that .. I guess background service or foreground - Done
+Can we take user location in background ? - Done
+What api we used to take user location ? - Done
+If application is killed still we will be able to update user location - Done
+Is it possible to continuous track user location in the background - Done
+Difference between thread and courting
+How we can make communication with automotive or which protocols we have in android automotive for communication
+What is device provisioning
+Difference between different dispatchers
+What is the use of let ? Can we use it with non null — which scope functions we can use with null and which we can use no null
+4 views(tabs) are there in one view I am hitting the api it should update other three view.how we can do that ?
+Best way to share data between two fragments
+
+//=============
+Can we create a custom theme in Jetpack compose (implement your own theme) - Done
+What is compositionLocal - Done
+How to do async work in Jetpack compose.what are the best possible ways to do that - Done
+Can we use Android views in compose.. - Done
+Can we use fragment in composable function - Done
+Can we can Two Lazy Column together in one view - Done
+Can we use single scroll for two different Lazy Column - Done
+Different between LaunchEffect and DecompoableEffect - Done
+How to store local variable in compose - Done
+Difference between Android ViewModel and ViewModel Done
+Difference between serialisable and Parcable - Done
+
+//======================================================= Tata elxsi =============
+
+
+Delegation in kotlin
+Viewmodel life cycle in Kotlin
+Difference between Coroutine and View Model
+Latent
+Different parser for api call - gson , Joshi
+Clean architecuture
+When you design any application from starts what you keep in mind
+How to do live tracking in android ?
+If you are inside try and catch. Will it catch exception in parent scope or in try catch?
+How to exchange exception between two threads
+How to trafer child exception to parent
+we dont have any context of main thread and backend thread getting exception and now need to send it to parent thread how we get exception
+user kill the app inbetween but job still executing in background job is to publish data to ui .. if user kill app what type of crash will be there
+Tiff database
+
+//
+Jsx in react native
+How do you navigate in react native
+How to add react native code with native code how is the process ?
+How to implement in DRM
+What do you mean by CDN how do you use in OTT app
+how to manage network disconnectibity issue in video streaming
+how to manage network disconnectibity issue in video streaming
+you have a round cake , i will allow you to cut three times but i need 8 pice equal how to solve this ?
+you are in a room and two doors in room one lead to exit and one door if open there is no exit point its wall and each door you find a guard one guard always tell truth other tells lie how we gonna identify which door is exit how we ask to guard
+
+//============
+
+MVI
+How to support multi language in android app
+Thread Lifecycle & type of threads
+what are the type of button in jetpackcompsoe
+use of modifier in compose function
+Sealed classes use in
+where we use also and run scope?
+difference between join and await in coroutine
+what are the scopes in coroutine andwer in 50 words
+how coroutines executes? And how it is different from thread
+can we use dependency injection for smaller projects
+benifit of dependency injection
+use of scope annotation
+
+//======================== LT Mind tree
+
+Calling Activity B from Activity A on button press… methods call of A and B
+All variations of Singleton in Java ..  easy init, lazy initialisation, synchronised, volatile
+Create Bundle and HashMap -> why Android created Bundle when Hashmap was there ?
+n java we already has hash map, ie store data in key value and in android we have budle
+why android created budle when hashmap is already there
+where to write business logic in mvvm ?
+how to change database version ?
+room database works on which thread ?
+how to create a ui which is recomposable? answer without code
+jetpack compose
+difference between row and column
+activity a , button , activity b
+going from a to b without fincishing it
+lifecycle?
+scope functions in coroutine
+how can i freeze ui till  (10 sec) then when all api run  and give me result
+16 api call in parallel .. need to update ui if api update if fail we have to show alert
+all api have different time manage
+we can show updated api after all api run
+About Coroutines
+Why Kotlin over Java
+What is design pattern
+Bucket concept in Hashmap
+can i store null as key in hashmap
+what is comparable and comparative
+is a relation and has a relation
+data abstraction and encapsulation difference
+answer me some oops concept in 80 lines
+what tool determines the lines of code
+what are advantages of agile?
+Encapsulation vs Abstraction
+MVI
+
+
+ouput should ajay is name your without using revesre function in kotlin - Program this is the input—>
+Your name is ajay //input
+ajay is name Your //oouptout
+
+Difference between MVVM and Clean architecture
+Binding adapter
+Difference between flow and live data
+Where you use runBlocking in project
+
+//==================================== ACL Digital Flow carrer
+
+difference between compile sdk version and targeted sdk version
+How many types of api u have used .. Rest and soap
+Soap implementation in android
+Difference between onpause and instant
+Syntax for toast messages
+Object vs companion object
+Dagger Uses
+How to minimize api calls in onResume of fragment in ViewPager
+How can you create deadlock scenario programmatically
+While implementing Expresso what things you should take care of
+Higher order function
+Difference between Get and Post API Integration
+You need to write a Kotlin json parser that you can use other places as well
+
