@@ -48,4 +48,28 @@ fun main() {
     }
     println(result)
 
+    //==========================
+
+    lambdaFun2 { a, b ->  println("printlng $a $b") }
+
+    //============
+
+    val lamResult = lambdaFun3 { a, b ->
+        a + b
+    }
+
+    println(lamResult)
+
+}
+
+
+fun lambdaFun2(action:(Int, Int) -> Unit) : Unit {
+
+    action(2,2)
+
+}
+
+fun lambdaFun3(action: (Int, Int) -> Int) : Int { // if method returns lamda also should return
+    return action(4,4)
+
 }

@@ -1,0 +1,25 @@
+
+
+
+What happens if you don’t provide a constructor in a class?
+If you don’t provide a constructor in a class in Java,
+the compiler automatically generates a default constructor with no arguments and no operation which is a default constructor.
+
+
+How many types of constructors are used in Java?
+There are two types of constructors in Java as mentioned below:
+
+Default Constructor
+Parameterized Constructor
+Default Constructor: It is the type that does not accept any parameter value. It is used to set initial values for object attributes.
+
+class_Name();
+// Default constructor called
+
+
+Parameterized Constructor: It is the type of constructor that accepts parameters as arguments. These are used to assign values to instance variables during the initialization of objects.
+
+class_Name(parameter1, parameter2......);
+// All the values passed as parameter will be
+// allocated accordingly
+

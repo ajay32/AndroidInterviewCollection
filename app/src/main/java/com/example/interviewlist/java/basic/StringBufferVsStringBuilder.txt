@@ -1,0 +1,5 @@
+
+
+Which among String or String Buffer should be preferred when there are a lot of updates required to be done in the data?
+The string is preferred over StringBuffer as StringBuilder is faster than StringBuffer,
+ but StringBuffer objects are the preferred over as it provides more thread safety.

@@ -1,0 +1,9 @@
+
+
+3. What is JVM?
+
+
+JVM stands for Java Virtual Machine it is a Java interpreter. It is responsible for loading, verifying, and executing the bytecode created in Java.
+
+Although it is platform dependent which means the software of JVM is different for different Operating Systems it plays a vital role in making Java platform Independent.
+

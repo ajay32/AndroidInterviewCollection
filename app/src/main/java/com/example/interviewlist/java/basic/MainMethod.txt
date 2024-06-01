@@ -1,0 +1,5 @@
+
+
+What will happen if we declare don’t declare the main as static?
+We can declare the main method without using static and without getting any errors.
+But, the main method will not be treated as the entry point to the application or the program.

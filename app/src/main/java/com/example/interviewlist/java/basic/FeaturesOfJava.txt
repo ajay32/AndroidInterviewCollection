@@ -1,0 +1,29 @@
+
+
+What are the main features of Java?
+Java's robustness makes it stand out with its powerful features.
+
+Core Features of Java
+Platform Independence: Write once, run anywhere (WORA) through Java Virtual Machine (JVM).
+
+Object-Oriented Design: Emphasizes on objects and classes, promoting encapsulation, inheritance, and polymorphism.
+
+Strong Typing: Variables are strongly typed, reducing ambiguity and potential for errors.
+
+Security: Offers a secure platform with features such as a bytecode verifier and a security manager.
+
+Memory Management: Centralized memory allocation and automatic garbage collection, reducing the risk of memory leaks.
+
+Concurrency: Multi-threading, enabling concurrent execution and efficient multitasking.
+
+Architecture-Neutrality: Promotes scalability in terms of hardware and software configurations.
+
+Dynamic Linking: Modules can be loaded on-the-fly if needed, enhancing flexibility.
+
+Simplicity: Easy-to-learn syntax and standard libraries simplify software development.
+
+Portability: Java's "compile once, run anywhere" philosophy enables it to function across diverse platforms.
+
+JIT Compilation: Combines the flexibility of bytecode with the performance of machine code.
+
+

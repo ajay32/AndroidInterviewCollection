@@ -1,0 +1,8 @@
+
+. What is Java String Pool?
+A Java String Pool is a place in heap memory where all the strings defined in the program are stored.
+ A separate place in a stack is there where the variable storing the string is stored.
+ Whenever we create a new string object, JVM checks for the presence of the object in the String pool,
+ If String is available in the pool, the same object reference is shared with the variable, else a new object is created.
+
+ checkout image for reference

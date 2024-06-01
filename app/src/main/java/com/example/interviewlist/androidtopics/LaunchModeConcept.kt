@@ -26,6 +26,8 @@ package com.example.interviewlist.androidtopics
 // Single instance (activity runs in its own task)
 // A B  -> launching C  -> Two stacks A B | C
 // A B (main task) C (Single Instance) - > launching C again -> A B (main task) C (single instance)
+// A B | C  -> Launch B again -> [A B] stack 1 | [C] Stack 2  -> here A B stack will be at top for use ..no new activites will be created
+// A B | C -? Launch A again -> B A | C -> A will be at top of stack 1 for us
 
 
 

@@ -1,0 +1,43 @@
+
+
+How does garbage collection work in Java?
+In Java, the Virtual Machine (JVM) manages memory through automatic garbage collection (GC). This process identifies and reclaims objects that are no longer in use.
+
+Key Concepts
+Reachability: Objects are considered "alive" if they are reachable from the root object, which can be a Thread, Stack, or Static reference. Unreachable objects are eligible for garbage collection.
+
+Reference Types: There are different reference types that play a role in determining an object's reachability and GC eligibility.
+
+Reference Types
+Strong References: The most common type, created with Object obj = new Object(). Objects with strong references are not eligible for GC.
+
+Soft References: Denoted by SoftReference<Object> softRef = new SoftReference<>(obj). Soft-referenced objects are garbage-collected only if the JVM requires memory.
+
+Weak References: Created with WeakReference<Object> weakRef = new WeakReference<>(obj). These objects are reclaimed during the next GC cycle if they are not reachable.
+
+Phantom References: Rarely used, these are created using PhantomReference, typically in conjunction with a ReferenceQueue. They are enqueued before being collected during the next GC cycle.
+
+Finalization: The GC process can finalize an object before it reclaims it. This capability is associated with finalize() method, allowing the object to perform any necessary cleanup actions before being garbage-collected.
+
+Code example: Different types of references
+Here is the Java code:
+
+import java.lang.ref.*;
+
+public class ReferenceTypes {
+    public static void main(String[] args) {
+        Object obj = new Object();  // Strong Reference
+        SoftReference<Object> softRef = new SoftReference<>(obj);  // Soft Reference
+        WeakReference<Object> weakRef = new WeakReference<>(obj);  // Weak Reference
+
+        PhantomReference<Object> phantomRef = new PhantomReference<>(obj, new ReferenceQueue<>());  // Phantom Reference
+        obj = null;  // obj is no longer a strong reference to the object, making it eligible for garbage collection
+    }
+}
+Interview Tips
+Each reference type caters to specific memory management requirements. Understanding their use-cases is crucial for efficient resource utilization.
+
+The finalize() method, while still available, is considered obsolete. Its use is generally discouraged due to potential performance and reliability concerns.
+
+Familiarize yourself with more modern memory management tools, such as java.lang.ref.Cleaner, introduced in Java 9, for effective resource management in better ways.
+

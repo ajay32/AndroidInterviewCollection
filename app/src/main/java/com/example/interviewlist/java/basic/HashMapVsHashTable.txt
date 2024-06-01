@@ -1,0 +1,65 @@
+package com.example.interviewlist.java.basic
+
+Certainly! Here's a detailed comparison of `HashMap` and `Hashtable` in Java, presented in table format:
+
+| **Feature**            | **HashMap**                                       | **Hashtable**                                     |
+|------------------------|---------------------------------------------------|---------------------------------------------------|
+| **Interface**          | Implements `Map`                                  | Implements `Map`                                  |
+| **Synchronization**    | Not synchronized                                  | Synchronized (thread-safe)                        |
+| **Null values**        | Allows one null key and multiple null values      | Does not allow null keys or null values           |
+| **Order**              | Does not guarantee any order                      | Does not guarantee any order                      |
+| **Performance**        | Generally faster due to non-synchronized methods  | Generally slower because of synchronization       |
+| **Iterator**           | Fail-fast iterator                                | Fail-safe iterator                                |
+| **Use Case**           | Preferred in single-threaded or externally synchronized multi-threaded scenarios | Used in multi-threaded scenarios where method-level synchronization is required |
+| **Modern Usage**       | Commonly used                                     | Considered obsolete; replaced by `ConcurrentHashMap` for better performance in multi-thread scenarios |
+
+This table encapsulates the key distinctions and use cases for both `HashMap` and `Hashtable`, helping you to decide which is more suitable depending on your application's needs, especially concerning thread safety and performance.
+
+
+`HashMap` and `HashTable` are two data structures available in Java used to store data in key-value pairs. They are part of the Java Collections Framework but have different properties and are used in different scenarios based on their specific characteristics.
+
+### HashMap
+
+`HashMap` is a part of the Java Collections since Java 1.2. It stores its elements in a hash table, and it uses hashing to store the keys.
+
+**Characteristics of HashMap:**
+
+- **Not synchronized**: `HashMap` is not synchronized, meaning it is not thread-safe without external synchronization. Its unsynchronized nature means that it performs better in scenarios where synchronization is not a concern.
+- **Allows one null key and multiple null values**: You can store one null key and as many null values as you like in a `HashMap`. This makes it more flexible in certain use cases where you need to represent some missing data.
+- **No guarantee on iteration order**: The order of iteration over `HashMap` entries can appear random and will not be in the order you inserted them. The order is based on the hash of the keys.
+- **Performance**: Offers constant-time performance for the basic operations (`get` and `put`), assuming the hash function disperses the elements properly among the buckets.
+
+**Example Usage:**
+```java
+HashMap<String, Integer> map = new HashMap<>();
+map.put("one", 1);
+map.put("two", 2);
+System.out.println(map.get("one"));  // Output: 1
+```
+
+### HashTable
+
+`HashTable` is a legacy class that was part of Java since version 1.0. It is similar in functionality but differs in several key aspects.
+
+**Characteristics of HashTable:**
+
+- **Synchronized**: `HashTable` is synchronized, meaning it is thread-safe. It ensures that only one thread can modify the hash table at one time, which is essential in multi-threaded environments but results in a performance cost.
+- **Does not allow null keys or values**: `HashTable` cannot contain null keys or values. Attempting to insert nulls throws a `NullPointerException`.
+- **Guarantees order of iteration as of Java 1.4**: `HashTable` is now part of the Collections Framework and returns a `Collections.enumeration` that is fail-safe for changes in the map during iteration.
+- **Performance**: Because of its synchronization, `HashTable` may have worse performance than `HashMap`, especially in contexts where high concurrency is not required.
+
+**Example Usage:**
+```java
+Hashtable<String, Integer> table = new Hashtable<>();
+table.put("one", 1);
+table.put("two", 2);
+System.out.println(table.get("one"));  // Output: 1
+```
+
+### When to Use Each?
+
+- **Use `HashMap`** when you do not require synchronization automatically and null keys or values are needed. It is generally preferred over `HashTable` due to its flexibility and better performance in non-concurrent scenarios.
+- **Use `HashTable`** when you require a thread-safe implementation without needing to implement your own synchronization. However, in modern applications, it's often better to use `ConcurrentHashMap`, which provides better scalability under high concurrency than `HashTable`.
+
+Given that `HashTable` is considered somewhat obsolete in newer Java versions (favoring `ConcurrentHashMap` for thread-safe operations and `HashMap` for non-threaded applications), it's generally recommended to use `HashMap` or other more modern alternatives unless maintaining legacy Java applications.
+
